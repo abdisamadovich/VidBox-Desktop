@@ -3,7 +3,22 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VidBox-Desktop", "VidBox-Desktop\VidBox-Desktop.csproj", "{906A6623-A7B9-4E8F-94BC-CA4A1C263B9A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8DD3DAB0-E494-481D-817E-D2525BF8C301}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VidBox-Desktop", "src\VidBox-Desktop\VidBox-Desktop.csproj", "{6344F77C-C041-40CA-9AF6-BA8B833B49B2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DCDC94E3-F7CE-4D9B-B873-ABB1D129DFA4} = {DCDC94E3-F7CE-4D9B-B873-ABB1D129DFA4}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VidBox-Dtos", "src\VidBox-Dtos\VidBox-Dtos.csproj", "{78574937-9C7F-4ED8-A38E-5E8D76DBDE11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VidBox-Integrated", "src\VidBox-Integrated\VidBox-Integrated.csproj", "{DCDC94E3-F7CE-4D9B-B873-ABB1D129DFA4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{78574937-9C7F-4ED8-A38E-5E8D76DBDE11} = {78574937-9C7F-4ED8-A38E-5E8D76DBDE11}
+		{8D27C1BD-CF21-44DF-A6D5-F11E6F82E50C} = {8D27C1BD-CF21-44DF-A6D5-F11E6F82E50C}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VidBox-ViewModels", "src\VidBox-Desktop\VidBox-ViewModels\VidBox-ViewModels.csproj", "{8D27C1BD-CF21-44DF-A6D5-F11E6F82E50C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +26,31 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{906A6623-A7B9-4E8F-94BC-CA4A1C263B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{906A6623-A7B9-4E8F-94BC-CA4A1C263B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{906A6623-A7B9-4E8F-94BC-CA4A1C263B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{906A6623-A7B9-4E8F-94BC-CA4A1C263B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6344F77C-C041-40CA-9AF6-BA8B833B49B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6344F77C-C041-40CA-9AF6-BA8B833B49B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6344F77C-C041-40CA-9AF6-BA8B833B49B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6344F77C-C041-40CA-9AF6-BA8B833B49B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78574937-9C7F-4ED8-A38E-5E8D76DBDE11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78574937-9C7F-4ED8-A38E-5E8D76DBDE11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78574937-9C7F-4ED8-A38E-5E8D76DBDE11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78574937-9C7F-4ED8-A38E-5E8D76DBDE11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCDC94E3-F7CE-4D9B-B873-ABB1D129DFA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCDC94E3-F7CE-4D9B-B873-ABB1D129DFA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCDC94E3-F7CE-4D9B-B873-ABB1D129DFA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCDC94E3-F7CE-4D9B-B873-ABB1D129DFA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D27C1BD-CF21-44DF-A6D5-F11E6F82E50C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D27C1BD-CF21-44DF-A6D5-F11E6F82E50C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D27C1BD-CF21-44DF-A6D5-F11E6F82E50C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D27C1BD-CF21-44DF-A6D5-F11E6F82E50C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6344F77C-C041-40CA-9AF6-BA8B833B49B2} = {8DD3DAB0-E494-481D-817E-D2525BF8C301}
+		{78574937-9C7F-4ED8-A38E-5E8D76DBDE11} = {8DD3DAB0-E494-481D-817E-D2525BF8C301}
+		{DCDC94E3-F7CE-4D9B-B873-ABB1D129DFA4} = {8DD3DAB0-E494-481D-817E-D2525BF8C301}
+		{8D27C1BD-CF21-44DF-A6D5-F11E6F82E50C} = {8DD3DAB0-E494-481D-817E-D2525BF8C301}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F70269DF-8AC5-4034-8D2C-9E9107C29D35}
